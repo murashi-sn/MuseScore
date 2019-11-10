@@ -37,7 +37,7 @@ SET "INSTALL_FOLDER=msvc.install"
 
 IF "%2"=="32" (
     SET "ARCH=x86"
-    SET GENERATOR_NAME="Visual Studio 15 2017"
+    REMSET GENERATOR_NAME="Visual Studio 16 2019"
     SET BUILD_64=OFF
 ) ELSE (
     IF NOT "%2"=="" (
@@ -46,12 +46,12 @@ IF "%2"=="32" (
             GOTO :END
         ) ELSE (
             SET "ARCH=x64"
-            SET GENERATOR_NAME="Visual Studio 15 2017 Win64"
+            SET GENERATOR_NAME="Visual Studio 16 2019 Win64"
             SET BUILD_64=ON
         )
     ) ELSE (
         SET "ARCH=x64"
-        SET GENERATOR_NAME="Visual Studio 15 2017 Win64"
+        SET GENERATOR_NAME="Visual Studio 16 2019 Win64"
         SET BUILD_64=ON
     )
 )    
